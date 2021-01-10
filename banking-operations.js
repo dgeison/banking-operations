@@ -57,10 +57,13 @@ function getTransactionsCount() {
 
 createTransaction({ type: "credit", value: 50 });
 createTransaction({ type: "credit", value: 120 });
+createTransaction({ type: "credit", value: 220 });
 createTransaction({ type: "debit", value: 80 });
 createTransaction({ type: "debit", value: 30 });
 
 console.log(user.balance); // 60
+console.table(user.transactions);
+console.log(user.transactions);
 
 console.log(getHigherTransactionByType("credit")); // { type: 'credit', value: 120 }
 console.log(getHigherTransactionByType("debit")); // { type: 'debit', value: 80 }
